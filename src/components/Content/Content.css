@@ -87,5 +87,13 @@
 
     .content .my-image {
         width: 50%;
+        margin-top: 2.5rem;
+    }
+
+    .footer {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1rem;
+        color: #666;
     }
 }
