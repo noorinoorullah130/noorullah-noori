@@ -1,0 +1,31 @@
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 2rem 0;
+}
+
+.projects h1 {
+    margin-bottom: 1rem;
+    margin-top: -2.5rem;
+}
+
+.projects .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 550px);
+    gap: 3.5rem;
+}
+
+@media (max-width: 768px) {
+    .projects .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .projects .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+

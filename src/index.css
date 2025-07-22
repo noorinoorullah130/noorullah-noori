@@ -23,6 +23,13 @@ body {
     flex-direction: column;
 }
 
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+}
+
 @media (max-width: 768px) {
     .app {
         padding: 0 1.5rem;
@@ -33,7 +40,7 @@ body {
     body {
         padding: 0 1rem;
     }
-    
+
     .app {
         padding: 0 1rem;
     }
