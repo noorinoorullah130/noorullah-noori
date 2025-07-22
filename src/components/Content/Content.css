@@ -33,6 +33,35 @@
     border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .content .info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info h1 {
+        font-size: 3.5rem;
+    }
+
+    .info h5 {
+        font-size: 1.3rem;
+    }
+
+    .info p {
+        font-size: 1.2rem;
+    }
+
+    .content .my-image {
+        width: 40%;
+    }
+}
+
 @media (max-width: 576px) {
     .content {
         flex-direction: column;
