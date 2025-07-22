@@ -33,6 +33,13 @@
     border-radius: 50%;
 }
 
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+}
+
 @media (max-width: 768px) {
     .content {
         display: flex;
