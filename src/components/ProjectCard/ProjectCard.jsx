@@ -1,19 +1,26 @@
 import React from "react";
 
 import "./ProjectCard.css";
-import sampleProject from "../../assets/images/payroll management system.png";
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
+    const { title, description, technologies, image, link, github } = props;
+
     return (
         <div className="project">
-            <img src={sampleProject} alt="" />
-            <h2>Project 1: Portfolio Website</h2>
+            <img src={image} alt="" />
+            <h2>{title}</h2>
+            <p>{description}</p>
             <p>
-                A personal portfolio website showcasing my skills and projects.
-                Built with React.js and styled-components.
+                {technologies.map((tech, i) => (
+                    <span key={i}>{tech}&nbsp;&nbsp;&nbsp;</span>
+                ))}
             </p>
-            <a href="#" className="project-link" />
-            <p className="project-link">View Project</p>
+            <a href={github} className="project-link" target="_blank">
+                Github Link
+            </a>
+            <a href={link} className="project-link" target="_blank">
+                View Project
+            </a>
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React from "react";
 
 import "./Projects.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import ProjectsData from "../../data/ProjectsData";
 
 const Projects = () => {
     return (
@@ -9,13 +10,17 @@ const Projects = () => {
             <h1>My Projects / Work</h1>
 
             <div className="projects-container">
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                {ProjectsData.map((project) => (
+                    <ProjectCard
+                        key={project.id}
+                        title={project.title}
+                        description={project.description}
+                        technologies={project.technologies}
+                        image={project.image}
+                        link={project.link}
+                        github={project.github}
+                    />
+                ))}
             </div>
 
             <footer className="footer" style={{ marginTop: "10rem" }}>
