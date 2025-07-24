@@ -64,7 +64,11 @@ const Contact = () => {
                     </p>
                 </div>
 
-                <form className="contact-form">
+                <form
+                    className="contact-form"
+                    action="https://formsubmit.co/noorinoorullah130@gmail.com"
+                    method="POST"
+                >
                     <div className="form-row">
                         <div className="form-group">
                             <label htmlFor="name">NAME</label>
