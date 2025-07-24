@@ -1,40 +1,10 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 
 import "./Contact.css";
 import { FaGithub, FaLinkedin, FaFacebook, FaPaperPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-    const form = useRef();
-    const [isSending, setIsSending] = useState(false);
-    const [status, setStatus] = useState("");
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-        setIsSending(true);
-
-        emailjs
-            .sendForm(
-                "service_m8kw3ld", // Replace with your EmailJS Service ID
-                "template_a2mtm1o", // Replace with your EmailJS Template ID
-                form.current,
-                "jnC_lmuPm8tNHdMQp" // Replace with your EmailJS Public Key
-            )
-            .then(
-                (result) => {
-                    setStatus("Message sent successfully! 🎉");
-                    form.current.reset();
-                },
-                (error) => {
-                    setStatus("Failed to send message. Please try again. ❌");
-                }
-            )
-            .finally(() => {
-                setIsSending(false);
-            });
-    };
-
     return (
         <div className="contact">
             <h1>Contact Me</h1>
@@ -94,14 +64,13 @@ const Contact = () => {
                     </p>
                 </div>
 
-                <form ref={form} onSubmit={sendEmail} className="contact-form">
+                <form className="contact-form">
                     <div className="form-row">
                         <div className="form-group">
                             <label htmlFor="name">NAME</label>
                             <input
                                 type="text"
                                 id="name"
-                                name="name"
                                 placeholder="Enter your name"
                                 required
                             />
@@ -112,7 +81,6 @@ const Contact = () => {
                             <input
                                 type="email"
                                 id="email"
-                                name="email"
                                 placeholder="Enter your email"
                                 required
                             />
@@ -123,28 +91,15 @@ const Contact = () => {
                         <label htmlFor="message">MESSAGE</label>
                         <textarea
                             id="message"
-                            name="message"
                             placeholder="Enter your message"
                             rows="5"
                             required
                         ></textarea>
                     </div>
 
-                    <button
-                        type="submit"
-                        className="submit-btn"
-                        disabled={isSending}
-                    >
-                        {isSending ? (
-                            "Sending..."
-                        ) : (
-                            <>
-                                <FaPaperPlane className="icon" /> SUBMIT
-                            </>
-                        )}
+                    <button type="submit" className="submit-btn">
+                        <FaPaperPlane className="icon" /> SUBMIT
                     </button>
-
-                    {status && <p className="form-status">{status}</p>}
                 </form>
             </div>
 
