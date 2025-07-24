@@ -23,7 +23,7 @@ const Contact = () => {
                 <h2 className="social-item">
                     <FaLinkedin className="social-icon" />
                     <a
-                        href="https://linkedin.com/in/yourprofile"
+                        href="https://www.linkedin.com/in/noorullah-noori-a243b4357"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -34,7 +34,7 @@ const Contact = () => {
                 <h2 className="social-item">
                     <FaFacebook className="social-icon" />
                     <a
-                        href="https://facebook.com/yourprofile"
+                        href="https://www.facebook.com/share/1Asi99d2Az/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -49,7 +49,7 @@ const Contact = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        WhatsApp: Noorullah Noori
+                        WhatsApp: +93775382538
                     </a>
                 </h2>
             </div>
