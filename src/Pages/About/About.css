@@ -104,6 +104,37 @@
     text-align: center;
 }
 
+@media (max-width: 1200px) {
+    .about .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro div {
+        width: 80%;
+        text-align: center;
+    }
+
+    .career {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .career div {
+        width: 80%;
+        text-align: center;
+    }
+
+    .topics {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .experienceTopics {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 768px) {
     .about .intro {
         flex-direction: column;

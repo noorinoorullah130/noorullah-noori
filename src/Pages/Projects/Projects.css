@@ -17,6 +17,12 @@
     gap: 3.5rem;
 }
 
+@media (max-width: 1200px) {
+    .projects .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .projects .projects-container {
         grid-template-columns: repeat(2, 1fr);
