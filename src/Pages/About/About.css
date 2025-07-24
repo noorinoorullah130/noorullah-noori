@@ -68,6 +68,42 @@
     background-color: #d1d1d1;
 }
 
+.experience {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.experience .experienceIntro {
+    width: 100%;
+}
+
+.experience h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.experience p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.experienceTopics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.experienceTopic {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .about .intro {
         flex-direction: column;
@@ -91,6 +127,29 @@
 
     .topics {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .topics h2 {
+        font-size: 1rem;
+    }
+
+    .experienceTopics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experienceTopic {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .experience h1 {
+        font-size: 1.5rem;
+    }
+
+    .experience p {
+        font-size: 1rem;
+        line-height: 1.4;
     }
 }
 
@@ -129,5 +188,31 @@
 
     .topics h2 {
         font-size: 12px;
+    }
+
+    .experienceTopic {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .experience h1 {
+        font-size: 1.5rem;
+    }
+
+    .experience p {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .experienceTopics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experienceTopic {
+        width: 100%;
+        max-width: 300px;
     }
 }

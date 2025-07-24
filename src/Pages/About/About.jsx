@@ -4,6 +4,45 @@ import "./About.css";
 import profileImage from "../../assets/images/Screenshot 2025-06-03 124446.png";
 
 const About = () => {
+    const topics = [
+        "Front-end",
+        "Back-end",
+        "Database",
+        "Graphic Design",
+        "UX Design",
+        "Coding",
+        "Prototyping",
+        "Webflow",
+    ];
+
+    const experienceTopics = [
+        {
+            languages: "HTML, CSS, JavaScript",
+            type: "Frontend",
+            duaDate: "Dec 2023 - Dec 2024",
+        },
+        {
+            languages: "React",
+            type: "JavaScript Frameworks",
+            duaDate: "Jan 2025 - Now",
+        },
+        {
+            languages: "Node.js, Express.js",
+            type: "Backend",
+            duaDate: "Mar 2025 - Now",
+        },
+        {
+            languages: "MongoDB, MySQL, PostgreSQL",
+            type: "Database",
+            duaDate: "Jun 2023 - Now",
+        },
+        {
+            languages: "Webflow, WordPress, Figma",
+            type: "Web Development",
+            duaDate: "Mar 2025 - Now",
+        },
+    ];
+
     return (
         <div className="about">
             <div className="intro">
@@ -30,7 +69,12 @@ const About = () => {
                         to the user.
                     </p>
                 </div>
-                <img src={profileImage} className="profileImage" style={{ borderRadius: 30 }} alt="" />
+                <img
+                    src={profileImage}
+                    className="profileImage"
+                    style={{ borderRadius: 30 }}
+                    alt=""
+                />
             </div>
 
             <div className="career">
@@ -49,14 +93,41 @@ const About = () => {
                     </p>
                 </div>
                 <div className="topics">
-                    <h2>Front-end</h2>
-                    <h2>Back-end</h2>
-                    <h2>Database</h2>
-                    <h2>Graphic Design</h2>
-                    <h2>UX Design</h2>
-                    <h2>Coding</h2>
-                    <h2>Prototyping</h2>
-                    <h2>Webflow</h2>
+                    {topics.map((topic, index) => (
+                        <h2 key={index} className="topic">
+                            {topic}
+                        </h2>
+                    ))}
+                </div>
+            </div>
+
+            <div className="experience">
+                <div className="experienceIntro">
+                    <h1>My experience</h1>
+                    <p>
+                        <strong>
+                            Senior Frontend Developer & Junior Backend
+                            Developer:
+                        </strong>
+                        <br />
+                        ‍With two years of experience, I specialize in building
+                        responsive, user-friendly web applications using React
+                        and other modern frontend frameworks. On the backend, I
+                        work with Node.js and databases like MongoDB, MySQL and
+                        PostgreSQL to create scalable, efficient APIs. I enjoy
+                        collaborating with cross-functional teams to bridge the
+                        gap between frontend and backend, ensuring seamless and
+                        performant user experiences.
+                    </p>
+                </div>
+                <div className="experienceTopics">
+                    {experienceTopics.map((topic, index) => (
+                        <div key={index} className="experienceTopic">
+                            <h2>{topic.languages}</h2>
+                            <p>{topic.type}</p>
+                            <p>{topic.duaDate}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
 
